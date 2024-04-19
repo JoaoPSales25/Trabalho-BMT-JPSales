@@ -1,0 +1,12 @@
+Descrição do formato do Modelo:
+
+O modelo é composto por uma matriz contendo no eixo vertical todas as palavras distintas de todos os documentos concatenados. Já nas colunas, temos uma coluna por documento, onde o cabeçalho da coluna descreve o número do documento, e em cada linha i de uma coluna j, temos o peso da palavra i para o documento j. 
+
+Esse peso foi calculado a partir do modelo vetorial tf-idf. Para encontrar o peso de cada Wij, calculou-se:
+
+    tf - o a frequencia de cada termo em cada documento
+    df - a frequencia de cada termo em todos documentos
+    idf - logarítimo da divisão do número total de documentos pelo df (por termo)
+
+A partir desses dados pode-se calcular o peso de cada termo para cada documento Wij a partir da multiplicação de tf por idf.
+
